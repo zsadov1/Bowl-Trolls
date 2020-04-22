@@ -5,7 +5,7 @@ function SearchForm(props) {
 		<>
 			<h4>Search:</h4>
 			<div>
-				<form>
+				<form onSubmit={props.handleSubmit}>
 					<input
 						type='text'
 						placeholder='Last name'
@@ -15,9 +15,8 @@ function SearchForm(props) {
 					<button
 						type='submit'
 						placeholder=''
-						onClick={props.handleInputChange}
-						className='btn btn-dark '
-					>
+						onClick={props.handleSearch}
+						className='btn btn-dark '>
 						<i className='fas fa-search'></i>
 					</button>
 					<button onClick={props.handleClear} className='btn btn-danger'>
